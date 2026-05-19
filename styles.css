@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.google.com/specimen/Montserrat');
+@import url('https://fonts.google.com/specimen/Fraunces');
+
+body {
+    font-family: 'Fraunces', serif;
+    background-color: hsl(30, 38%, 92%);
+    color: #333;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 95%;
+    border: 1px solid hsl(30, 38%, 92%);
+    margin-top: 15%;
+    margin-bottom: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+    display: block;
+}
+
+.content-container {
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 10px 10px;
+}
+.content-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+
+.content-container h1, p, span.original-price {
+    color:hsl(228, 12%, 48%)
+}
+span.current-price {
+    color: hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid hsl(158, 36%, 37%);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.add-to-cart::before {
+    content: url(images/icon-cart.svg);
+    padding-right: 5px;
+    vertical-align: middle;
+}
+.add-to-cart:hover {
+    background-color: hsl(158, 42%, 18%);
+    color: #fff;
+    border-color: hsl(158, 42%, 18%);
+    cursor: pointer;
+}
+.content-container p {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.3;
+}
+.content-container span.original-price {
+    text-decoration: line-through;
+    font-size: 0.875rem;
+}
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (min-width: 1440px) {
+    
+    .container {
+        width: 40%;
+        height: 40%;
+        display: flex;
+        margin: 10% auto 20%;
+        gap: 0;
+        border: 2px solid hsl(30, 38%, 92%);
+    }
+    .image-container {
+        width: 50%;
+        display: block;
+        margin-right: 0 !important;
+    }
+    img {
+        height: 100%;
+        border-radius: 10px 0 0 10px !important;
+    }
+    .content-container {
+        width: 50%;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
